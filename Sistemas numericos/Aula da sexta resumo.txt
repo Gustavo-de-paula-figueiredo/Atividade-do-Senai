@@ -1,0 +1,35 @@
+Código binário, contagem em 1 e 0 
+0= 0
+1= 1 
+2= 10
+3= 11
+4= 100
+5= 101
+6= 110
+7= 111
+8= 1000
+9= 1001
+10= 1010
+
+para converter de binário para decimal multiplicamos cada dígito no número binário com sua base elevada à potência com base em sua posição. Isso é feito começando do dígito mais à direita e movendo para a esquerda e somando todos os valores.
+
+Código Hexadecimal, contagem de 1 a 16
+1= 1
+2= 2
+3= 3
+4= 4
+5= 5
+6= 6
+7= 7
+8= 8
+9= 9
+10= a
+11= b
+12= c 
+13= d
+14= e
+15= f
+16= 10
+20= a1
+
+para converter de hexadecimal para decimal, utilizando potências de 16 que serão multiplicadas pelo valor em hexa na posição correspondente e o valor em decimal será o somatório.
