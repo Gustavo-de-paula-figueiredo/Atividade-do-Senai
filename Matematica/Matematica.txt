@@ -1,0 +1,68 @@
+int resultado = 0;
+int numeroA = 0;
+int contador = 0;
+int valor1 = 7; 
+int valor2 = 10; 
+void setup()
+{
+  
+  Serial.begin(9600);
+  
+  numeroA = map(600, 0, 1023, 0, 100);
+  Serial.print("o Map eh:");
+  Serial.println(numeroA);
+  
+  resultado = constrain(numeroA, 20, 80);
+  Serial.print("o constrain eh:");
+  Serial.println(resultado);
+  
+  ++contador;
+  Serial.println(contador);
+  ++contador;
+  Serial.println(contador);
+  ++contador;
+  Serial.println(contador);
+  ++contador;
+  Serial.println(contador);
+  ++contador;
+  Serial.println(contador);
+  ++contador;
+  Serial.println(contador);
+  ++contador;
+  Serial.println(contador);
+  ++contador;
+  Serial.println(contador);
+  ++contador;
+  Serial.println(contador);
+  ++contador;
+  Serial.println(contador);
+  --contador;
+  Serial.println(contador);
+  --contador;
+  Serial.println(contador);
+  --contador;
+  Serial.println(contador);
+  --contador;
+  Serial.println(contador);
+  --contador;
+  Serial.println(contador);
+   --contador;
+  Serial.println(contador);
+   --contador;
+  Serial.println(contador);
+  --contador;
+  Serial.println(contador);
+  --contador;
+  Serial.println(contador);
+--contador;
+  Serial.println(contador);
+
+float media = (valor1 + valor2) / 2.0;
+  Serial.print("A media eh: ");
+  Serial.println(media, 1); 
+  
+}
+void loop()
+{
+  
+}
