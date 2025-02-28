@@ -1,0 +1,183 @@
+ATIVIDADE 1:
+
+int temperatura = 31;
+
+void setup()
+{
+  pinMode(2, OUTPUT);
+  
+  if (temperatura > 30){
+ digitalWrite(2, HIGH);
+  }else{
+ digitalWrite(2, LOW);
+  }}
+void loop()
+{
+ 
+}
+
+ATIVIDADE 2:
+
+int bateria = 21;
+
+void setup()
+{
+pinMode (2, OUTPUT);
+  
+  if (bateria <= 20){
+ digitalWrite(2, HIGH);
+}else if (bateria <= 21 && bateria == 100){
+ digitalWrite(2, LOW);
+}
+ 
+}
+void loop()
+{
+
+}
+
+ATIVIDADE 3:
+
+int Numero = 4;
+int Divisor = 2;
+int resultado = 0;
+
+void setup()
+{
+  pinMode(2, OUTPUT);
+  
+  resultado = ( Numero % Divisor);
+  if (resultado == 0){
+  digitalWrite(2, HIGH);
+  }else {
+  digitalWrite(2, LOW);
+  }   
+}
+void loop()
+{
+  
+}
+
+ATIVIDADE 4:
+
+int real = -1;
+
+void setup()
+{
+  Serial.begin(9600);
+  
+    if (real < 0){
+    Serial.print("Esse numero eh negativo");
+  }else if (real > 0){
+   Serial.print("Esse numero eh positivo");
+  }else{
+    Serial.print("Esse numero eh 0");
+}
+}
+void loop()
+{
+  
+}
+
+ATIVIDADE 5:
+
+float salario = 698;
+float resultado = 0;
+float porcentagem = 10;
+float porcem = 100;
+
+void setup()
+{
+Serial.begin(9600);
+  
+
+  if(salario < 1000){
+resultado = (salario / porcem);
+resultado = (resultado * porcentagem);
+resultado = (resultado + salario);
+Serial.println("Nome:Gustavo");
+Serial.println("Cargo:Fachineiro");
+Serial.print("Seu novo salario eh:");
+Serial.print(resultado);
+  
+  }else { Serial.print("Voce ja esta com o pagamento correto");
+}
+}
+void loop()
+{
+  
+}
+
+ATIVIDADE 6: 
+
+float salario = 300;
+float resultado = 0;
+float porcentagem = 30;
+float porcem = 100;
+
+void setup()
+{
+Serial.begin(9600);
+  
+
+  if(salario < 500){
+resultado = (salario / porcem);
+resultado = (resultado * porcentagem);
+resultado = (resultado + salario);
+Serial.print("Seu novo salario eh:");
+Serial.print(resultado);
+  
+  }else { Serial.print("Voce ja esta com o pagamento correto");
+}
+}
+void loop()
+{
+  
+
+ATIVIDADE 7:
+
+int valor1 = 7;
+int valor2 = 6;
+void setup()
+{
+Serial.begin(9600);
+  if(valor1 > valor2){
+    Serial.print(valor1);}
+  else{
+ Serial.print(valor2); 
+}
+}
+void loop()
+{
+  
+}
+
+ATIVIDADE 8:
+
+
+float nota1 = 10;
+float nota2 = 8;
+float nota3 = 9;
+float nota4 = 7;
+float resultado = 0;
+float divisao = 4;
+
+void setup()
+{
+  Serial.begin(9600);
+  resultado = nota1 + nota2 + nota3 + nota4;
+  resultado = resultado / divisao;
+  Serial.print(resultado);
+  
+  if(resultado >= 7 && resultado <= 10){
+    Serial.print("aprovado");
+    
+  }else if (resultado >= 5 && resultado <=6.9){
+    Serial.print("recupercao");
+    
+  }else if (resultado < 5){
+    Serial.print("reprovou");
+  }
+}
+void loop()
+{}

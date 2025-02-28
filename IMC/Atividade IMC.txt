@@ -1,0 +1,36 @@
+/*
+Nome: Gustavo de Paula Figueiredo 
+Data:26/02/2025
+Descrição: Calculadora de IMC feita no Serial do Arduino 
+*/
+
+
+float Peso = 99.90;
+float Altura = 1.91;
+float Resultado = 0;
+
+void setup()
+{
+Serial.begin(9600);
+ 
+Resultado = sq(Altura);
+Resultado = Peso / Resultado;
+Serial.print("O seu imc eh:");
+Serial.println(Resultado);
+
+  if (Resultado >= 0 && Resultado <= 19.1) {
+    Serial.print("Vsi se nutri meu fi");
+  }else if (Resultado >= 19.2 && Resultado <= 25.8){
+    Serial.print("Perfecto");
+  }else if (Resultado >= 25.9 && Resultado <= 27.4){
+    Serial.print("acima do peso");
+  }else if (Resultado >= 27.5 && Resultado <= 32.4){
+     Serial.print("muito acima do peso");
+  }
+  
+}
+
+void loop()
+{
+
+}
