@@ -1,0 +1,54 @@
+#define LedAzul 7
+#define LedLaranja 4
+#define LedVermelho 3
+#define LedAmarelo 5
+#define LedVerde 6
+void setup()
+{
+  pinMode(LedVermelho, OUTPUT);
+  pinMode(LedAmarelo, OUTPUT);
+  pinMode(LedVerde, OUTPUT);
+  pinMode(LedVerde, OUTPUT);
+  pinMode(LedAzul, OUTPUT);
+  pinMode(LedLaranja, OUTPUT);
+  Serial.begin(9600);
+  int qualidade = 4;
+ 
+  switch(qualidade)
+  {
+    case 0:
+    digitalWrite(LedVermelho, HIGH);
+    Serial.println("pessimo");
+    break;
+    
+    case 1:
+    digitalWrite(LedLaranja, HIGH);
+    Serial.println("ruim");
+    break;
+    
+    case 2:
+    digitalWrite(LedAmarelo, HIGH);
+    Serial.println("normal");
+    break;
+
+    case 3:
+    digitalWrite(LedVerde, HIGH);
+    Serial.println("boa");
+    break;
+    
+    case 4:
+    digitalWrite(LedAzul, HIGH);
+    Serial.println("excelente");
+    break;
+    
+    default:
+    Serial.println("Valor invalido");
+    break;
+}
+}
+
+void loop()
+{
+  
+  
+}
