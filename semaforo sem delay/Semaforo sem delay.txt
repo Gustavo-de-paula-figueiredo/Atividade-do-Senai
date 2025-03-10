@@ -1,0 +1,59 @@
+/*
+NOME:Gustavo de Paula Figueiredo
+Descrição: Semefaro sem delay 
+
+*/
+
+
+
+
+#define   ledVerde 4
+#define ledAmarelo 3
+#define ledVermelho 2
+unsigned long tempoAntes = 0;
+unsigned long tempoVermelho = 1000;
+unsigned long tempoAmarelo = 1000;
+unsigned long tempoVerde = 1000;
+
+int esatado = 0;
+
+void setup()
+{
+  pinMode(ledVermelho, OUTPUT);
+  pinMode(ledAmarelo, OUTPUT);
+  pinMode(ledVerde, OUTPUT);
+  
+  digitalWrite(ledVermelho, HIGH);
+  digitalWrite(ledAmarelo, LOW);
+  digitalWrite(ledVerde, LOW);
+}
+
+void loop()
+{
+  unsigned long tempoTotal = millis();
+    
+  if(esatado == 0 && tempoTotal - tempoAntes >= tempoVerde)
+  {
+    digitalWrite(ledAmarelo, LOW);
+    digitalWrite(ledVerde, HIGH);
+    digitalWrite(ledVermelho,LOW);
+    tempoAntes = tempoTotal;
+    esatado = 1;
+  }else if(esatado == 1 && tempoTotal - tempoAntes >= tempoAmarelo)
+{
+    digitalWrite(ledAmarelo, HIGH);
+    digitalWrite(ledVermelho,LOW);
+    digitalWrite(ledVerde, LOW);
+    tempoAntes = tempoTotal;
+    esatado = 2;
+  }else if(esatado == 2 && tempoTotal - tempoAntes >= tempoVermelho){
+    
+    digitalWrite(ledVermelho, HIGH);
+    digitalWrite(ledAmarelo,LOW);
+    tempoAntes = tempoTotal;
+    esatado = 0;
+}}
+
+   
+
+
