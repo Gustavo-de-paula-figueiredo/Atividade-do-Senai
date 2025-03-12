@@ -1,0 +1,23 @@
+/*
+Nome:Gustavo de Paula 
+descrição:Botão que liga e desliga
+*/
+#define botao 8
+int contagemBotao = 0;
+void setup()
+{
+  pinMode(botao, INPUT);
+  Serial.begin(9600);
+ 
+}
+void loop()
+{
+ bool estadoBotao = digitalRead(botao);
+  static bool estadoAnterior = 0;
+  
+  if(estadoBotao == 1 && estadoAnterior == 0){
+    contagemBotao++;
+    Serial.println(contagemBotao);      
+  }
+  estadoAnterior = estadoBotao;
+}
